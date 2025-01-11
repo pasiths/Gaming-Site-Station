@@ -1,0 +1,338 @@
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 1rem 1.5rem;
+  color: white;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+header .logo img {
+  height: 40px;
+  margin-right: 0.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #ffcc00; /* Change color on hover */
+}
+
+.cart-search {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.cart-search a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.cart-search a img {
+  width: 20px; /* Icon size */
+  height: 20px;
+}
+
+.hero {
+  text-align: center;
+  padding: 5rem;
+  background: #f4f4f4;
+  background-image: url(/image/❤️❤️.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 5rem;
+  color: #f4f4f4;
+}
+
+.hero p {
+  color: #f4f4f4;
+}
+
+.hero .cta {
+  margin-top: 1rem;
+  padding: 1rem 1.5rem;
+  background: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.sub-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2rem;
+  gap: 1rem;
+  max-width: 100%;
+  overflow-x: hidden;
+  justify-content: space-between;
+}
+
+.sub-section:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.sub-section img {
+  max-width: 45%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.sub-section .content {
+  text-align: left;
+  max-width: 50%;
+}
+
+.intro {
+  padding: 3rem 1rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.intro-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.intro-content h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.intro-content p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Updated Sections */
+section {
+  padding: 2rem 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Adjust Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #333;
+  color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 1rem;
+  }
+
+  .logo {
+    order: 1;
+    flex: 1;
+    justify-content: flex-start;
+  }
+
+  .logo img {
+    height: 40px; /* Smaller logo size for mobile */
+    width: auto;
+  }
+
+  .cart-search {
+    display: flex;
+    gap: 1rem;
+    order: 3;
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    order: 2;
+  }
+
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 100%; /* Below the header */
+    left: 0;
+    z-index: 10;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav a {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #444;
+  }
+
+  .hamburger.active + nav {
+    display: flex;
+  }
+
+  .hero {
+    padding: 4rem 1rem; /* Larger padding for mobile */
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem; /* Adjust for mobile */
+  }
+
+  .hero p {
+    font-size: 1rem; /* Adjust font size for readability */
+  }
+
+  .sub-section {
+    flex-direction: column; /* Stack content vertically */
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .sub-section img {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .sub-section .content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .intro-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .intro-content p {
+    font-size: 0.9rem;
+  }
+
+  .upcoming-games .sub-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .upcoming-games .sub-section img {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .upcoming-games .sub-section .content {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .sub-section {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .sub-section:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .sub-section .content {
+    flex: 1;
+    margin-right: 1rem;
+  }
+
+  .sub-section img {
+    flex: 1;
+    margin-left: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+}
+
+/* Reset for child elements */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Debugging Section */
+section, header, footer, nav {
+  overflow-x: hidden; /* Force containment */
+}

@@ -1,0 +1,117 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem 1.5rem;
+    color: white;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header .logo img {
+    height: 40px;
+    margin-right: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+.cart-search {
+    display: flex;
+    gap: 1rem;
+}
+
+.cart-search a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}
+/* Branch Section */
+.branch {
+    margin-bottom: 2rem;
+    padding: 0 1rem; /* Add space to left and right */
+}
+
+.branch h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.branch-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Stretch both items to the same height */
+    gap: 1rem;
+}
+.map {
+    max-width: 48%; /* Ensure equal width */
+    height: 350px; /* Unified height */
+    flex: auto;
+    
+ 
+}
+
+.branch-content img
+ {
+    flex: 1;
+    max-width: 48%; /* Ensure equal width */
+    height: 350px; /* Unified height */
+    border-radius: 8px;
+    object-fit: cover; /* Maintain aspect ratio */
+   
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .branch-content {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center;
+    }
+
+    .branch-content img,
+    .branch-content .map iframe {
+        max-width: 100%; /* Full width on smaller screens */
+        height: auto; /* Adjust height to fit */
+    }
+}
