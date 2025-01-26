@@ -92,14 +92,19 @@ nav a:hover {
 /* Gaming Cards Section (Mobile Default) */
 .gaming-cards {
   display: grid;
-  grid-template-columns: 1fr; /* Single column for mobile */
-  gap: 1rem;
+  grid-template-columns: 1fr 1fr; /* Single column for mobile */
+  gap: 3rem;
   padding: 2rem;
   justify-items: center;
   align-items: start;
 }
 
 .gaming-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 600px;
+  max-height: 600px;
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -107,12 +112,12 @@ nav a:hover {
   text-align: center;
   padding: 1rem;
   width: 100%;
-  max-width: 320px;
+  /* max-width: 320px; */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gaming-card img {
-  width: 100%;
+  width: 50%;
   height: auto;
   border-bottom: 2px solid #ddd;
   margin-bottom: 1rem;
@@ -186,28 +191,29 @@ nav a:hover {
     right: 1.5rem; /* Align to the right */
     top: 1.5rem; /* Align within the header */
   }
+
+  .gaming-cards {
+    grid-template-columns: none; /* Two cards per row for desktop */
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gaming-card {
+    max-width: 100%; /* Fit cards within their grid columns */
+    padding: 0rem;
+    margin: 0 auto;
+
+}
+
+.gaming-card img {
+    height: auto;
+    margin-bottom: 1rem;
+}
 }
 
 
-  .gaming-cards {
-      grid-template-columns: (1,2fr); /* Two cards per row for desktop */
-      gap: 1rem;
-      padding: 1rem;
-      max-width: 1200px;
-      margin: 0 auto;
-  }
-
-  .gaming-card {
-      max-width: 100%; /* Fit cards within their grid columns */
-      padding: 1rem;
-      margin: 0 auto;
-
-  }
-
-  .gaming-card img {
-      width: 100%;
-      height: auto;
-      margin-bottom: 1rem;
-  }
+  
   
 
