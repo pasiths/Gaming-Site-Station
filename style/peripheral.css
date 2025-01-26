@@ -5,7 +5,7 @@ body {
   padding: 0;
   line-height: 1.6;
   box-sizing: border-box;
-  background-image: url(/image/8333\ \(1\).jpg);
+  background-image: url(../image/8333\ \(1\).jpg);
   background-size: cover;
 }
 
@@ -214,6 +214,13 @@ nav a:hover {
 }
 
 
-  
+  /* Mobile Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+  margin-top: auto;
+}
   
 

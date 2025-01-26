@@ -5,7 +5,7 @@ body {
   padding: 0;
   line-height: 1.6;
   box-sizing: border-box;
-  background-image: url(/image/8333\ \(1\).jpg);
+  background-image: url(../image/8333\ \(1\).jpg);
   background-size: cover;
 }
 
@@ -85,7 +85,7 @@ nav a:hover {
 .hero {
   text-align: center;
   padding: 5rem;
-  background-image: url('/image/❤️❤️.jpeg'); /* Add your desired image path */
+  background-image: url('../image/❤️❤️.jpeg'); /* Add your desired image path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
